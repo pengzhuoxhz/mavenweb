@@ -7,6 +7,10 @@
     <title>Insert title here</title>
 </head>
 <body>
-<div>${sb}</div>
+<form action="${pageContext.request.contextPath }/upload" method="POST" enctype="multipart/form-data">
+    源文件：      <input type="file" name="sourceFile"/><br/>
+    需要排序文件:<input type="file" name="orderFile" /><br/>
+                    <input type="submit" value="上传"/>
+</form>
 </body>
 </html>

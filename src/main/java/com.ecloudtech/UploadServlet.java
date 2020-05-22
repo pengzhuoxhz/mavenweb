@@ -15,13 +15,13 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-public class JobServlet extends HttpServlet {
+public class UploadServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public JobServlet() {
+    public UploadServlet() {
         super();
     }
 
@@ -111,8 +111,8 @@ public class JobServlet extends HttpServlet {
             }
 
         }
-        request.setAttribute("sb",sb.toString());
-        request.getRequestDispatcher("data.jsp").forward(request, response);
+        request.setAttribute("message",sb.toString());
+        request.getRequestDispatcher("message.jsp").forward(request, response);
     }
 
     //获取文件数据
